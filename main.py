@@ -6,16 +6,16 @@ import os
 
 app = Flask(__name__)
 CORS(app)
-def extrair_texto_pdf(caminho_arquivo):
+def extrair_texto_pdf(arquivo):
     texto = ""
 
-    with open(caminho_arquivo, "rb") as arquivo:
-        leitor = PyPDF2.PdfReader(arquivo)
-        num_paginas = len(leitor.pages)
 
-        for pagina in range(num_paginas):
-            conteudo_pagina = leitor.pages[pagina].extract_text()
-            texto += conteudo_pagina
+    leitor = PyPDF2.PdfReader(arquivo)
+    num_paginas = len(leitor.pages)
+
+    for pagina in range(num_paginas):
+        conteudo_pagina = leitor.pages[pagina].extract_text()
+        texto += conteudo_pagina
 
     return texto
 
@@ -73,13 +73,15 @@ def materias_atuais(texto_pdf):
 
 @app.route('/', methods=['POST'])
 def main():
-    pacote = request.json
+    pacote = request.files
+    print(pacote)
     pdf = pacote['pdf']
     texto_pdf = extrair_texto_pdf(pdf)
     array_informacoes = extrair_informacoes(texto_pdf)
     array_materias_porc = calcula_materias(array_informacoes)
     array_materias_atuais = materias_atuais(texto_pdf)
-    return jsonify([array_informacoes,array_materias_porc, array_materias_atuais])
+    retorno = [array_informacoes, array_materias_porc, array_materias_atuais]
+    return jsonify(retorno)
 
 if __name__ == '__main__':
     app.run(debug=True, port=os.getenv("PORT", default=5000))
