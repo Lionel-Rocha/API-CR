@@ -4,6 +4,7 @@ from flask import Flask, jsonify, request
 import os
 
 app = Flask(__name__)
+CORS(app)
 def extrair_texto_pdf(caminho_arquivo):
     texto = ""
 
