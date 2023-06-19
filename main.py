@@ -69,7 +69,7 @@ def materias_atuais(texto_pdf):
     return array_materias_atuais
 
 
-@app.route('/')
+@app.route('/', methods=['POST'])
 def main():
     pacote = request.json
     pdf = pacote['pdf']
