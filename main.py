@@ -21,7 +21,7 @@ def extrair_texto_pdf(arquivo):
 def extrair_informacoes(texto_pdf):
     CRs = []
     Areas = []
-    padrao_nome = r"Nome Aluno:\s*([A-Z\s]+)"
+    padrao_nome = r"Nome Aluno:\s*([A-Z\s-1]+)"
     nome = re.search(padrao_nome, texto_pdf).group(1)
 
     padrao_matricula = r"\d+(?=\sMatrícula)"
