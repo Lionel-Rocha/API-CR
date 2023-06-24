@@ -23,6 +23,7 @@ def extrair_informacoes(texto_pdf):
     Areas = []
     padrao_nome = r"Nome Aluno:\s*([A-Z\s-1]+)"
     nome = re.search(padrao_nome, texto_pdf).group(1)
+    nome = re.sub(".$", "", nome)
 
     padrao_matricula = r"\d+(?=\sMatrícula)"
     matricula = re.search(padrao_matricula, texto_pdf)[0]
