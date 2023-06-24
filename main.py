@@ -8,8 +8,6 @@ app = Flask(__name__)
 CORS(app)
 def extrair_texto_pdf(arquivo):
     texto = ""
-
-
     leitor = PyPDF2.PdfReader(arquivo)
     num_paginas = len(leitor.pages)
 
@@ -29,7 +27,7 @@ def extrair_informacoes(texto_pdf):
     padrao_matricula = r"\d+(?=\sMatrícula)"
     matricula = re.search(padrao_matricula, texto_pdf)[0]
 
-    padrao_curso = r"Data:\s*\d+/\d+/\d+\s+(.*?)\s+2020"
+    padrao_curso = r"Data:\s*\d+/\d+/\d+\s+(.*?)\s+20"
     curso = re.search(padrao_curso, texto_pdf).group(1)
 
     periodo_atual = re.search(r'Período Atual:\s*(.+)', texto_pdf).group(1)
@@ -46,7 +44,7 @@ def extrair_informacoes(texto_pdf):
     return [nome, matricula, curso, periodo_atual, CRs, cr_geral, Areas]
 
 def calcula_materias(array_informacoes):
-    array_quantofalta = []
+    array_quantofeito = []
     array = array_informacoes[6]
     for i in range(len(array)):
         area = array[i][0]
@@ -55,9 +53,8 @@ def calcula_materias(array_informacoes):
         numeros = relacao.split("/")
         materias_porc = (int(numeros[1]) / int(numeros[0]))
 
-        array_quantofalta.append([area, materias_porc * 100])
-
-    return array_quantofalta
+        array_quantofeito.append([area, materias_porc * 100])
+    return array_quantofeito
 
 
 def materias_atuais(texto_pdf):
@@ -68,13 +65,13 @@ def materias_atuais(texto_pdf):
 
     for codigo, nome_disciplina in correspondencias:
         array_materias_atuais.append([codigo, nome_disciplina])
+
     return array_materias_atuais
 
 
 @app.route('/', methods=['POST'])
 def main():
     pacote = request.files
-    print(pacote)
     pdf = pacote['pdf']
     texto_pdf = extrair_texto_pdf(pdf)
     array_informacoes = extrair_informacoes(texto_pdf)
