@@ -1,0 +1,15 @@
+.menu {
+  background-color: #343232;
+  display: flex;
+  min-height: 65px; 
+  
+  padding: 15px 30px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.h-menu {
+  display: flex;
+  list-style-type: none;
+  gap: 3rem;
+}
