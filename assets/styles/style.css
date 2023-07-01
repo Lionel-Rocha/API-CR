@@ -1,58 +1,44 @@
-*{
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
 body{
   background: #272525;
 }
 
+.h-menu {
+  background-color: aliceblue;
+}
 
-#file-error{
-  background-color: #343232;
-  border: #272525;
-  width: 657px;
-  height: 752px; 
-  position: relative;
+main{
+  display: flex;
   justify-content: center;
-  align-items: center;
+}
+#file-error *{
+  
+}
+#file-error {
+  background-color: #343232;
+  width: 660px;
+  border: 1px solid #343232;
+  border-radius: 10px;
+  padding: 50px;
 }
 
 .logo-projeto{
-  flex-direction: row;
-  display:block;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  margin: 10px;
+  font-size: ;
 }
 
 .file {
+  text-align: center;
   background-color: #D3D3D3;
-  display: block;
+  padding: 0 0 30px 0;
+  margin: 90px 130px 90px 130px;
+  border-radius: 8px;
+  border: 1px solid #343232;
   
-  font-size: 20px;
-  padding: 20px;
 }
 
-.cr-bar{
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+#pfile {
+  color: rgb(36, 35, 35);
+  font-size: 18px;
+  margin: 40px;
+  padding: 30px;
 }
 
-#progress-spinner {
-  border-radius: 50%;
-  height: 100px;
-  width: 100px;
-}
-
-#middle-circle {
-  position: absolute;
-  border-radius: 50%;
-  height: 80px;
-  width: 80px;
-  background-color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
