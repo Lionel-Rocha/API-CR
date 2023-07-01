@@ -3,14 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alpha</title>
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <title>CR VIEW</title>
 </head>
-<body >
-    <div id="file-error">
+<body>
+    <header>
+        <nav class="menu">
+            <div class="h-logo">
+                <a href="Logo.svg"><img id="logo-menu" src="Logo.svg" alt="Logo CR View"></a>
+            </div>
+
+            <div>
+                <ul class="h-menu">
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#">Créditos</a></li>
+                    <li><a href="#">Sobre Nós</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section id="file-error">
+        <div class="logo-projeto">  
+            <img src="Logo.svg" alt="Logo Alpha Junior">
+        </div>
+        <div class="file">     
+            <p>Insira abaixo o PDF do seu <br>
+            Coeficiente de Rendimento</p>
         <input type="file" name="historico" id="file-hist">
-        <span></span>
-    </div>
-    <input id="submitbtn" type="button" value="Enviar" onclick="uploadPdf()">
+        <input id="submitbtn" type="button" value="Enviar" onclick="uploadPdf()">
+        </div>
+    </section>
+    
+ 
 
     <script src="assets/scripts js/uploadpdf.js"></script>
 </body>

@@ -1,7 +1,36 @@
 *{
-  font-size: 10px;
-  font-weight: 600;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+body{
+  background: #272525;
+}
+
+
+#file-error{
+  background-color: #343232;
+  border: #272525;
+  width: 657px;
+  height: 752px; 
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-projeto{
+  flex-direction: row;
+  display:block;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin: 10px;
+}
+
+.file {
+  background-color: #D3D3D3;
+  display: block;
+  
+  font-size: 20px;
+  padding: 20px;
 }
 
 .cr-bar{
