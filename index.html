@@ -31,11 +31,16 @@
         <div class="file">     
             <p id="pfile">Insira abaixo o PDF do seu <br>
             Coeficiente de Rendimento</p>
-        <input id="file-hist" type="file" name="historico" >
-        <input id="submitbtn" type="button" value="Enviar" onclick="uploadPdf()">
+            
+        <input type="file" name="historico" id="file-hist" oninput="uploadPdf()">
+        <span></span> 
         </div>
     </section>
     </main>
     <script src="assets/scripts js/uploadpdf.js"></script>
 </body>
 </html>
+
+
+
+
