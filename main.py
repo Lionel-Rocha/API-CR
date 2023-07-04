@@ -48,7 +48,8 @@ def calcula_materias(array_informacoes):
     array_quantofeito = []
     array = array_informacoes[6]
     for i in range(len(array)):
-        area = array[i][0]
+        area = re.sub(r"\d?[.]?\d?[.]","",array[i][0])
+        area = re.sub(r"^\s", "" ,area)
         relacao = array[i][1]
 
         numeros = relacao.split("/")
@@ -60,11 +61,12 @@ def calcula_materias(array_informacoes):
 
 def materias_atuais(texto_pdf):
     array_materias_atuais = []
-    regex_disciplina = r"(TIN\d+)\s+(\w+(?:\s+\w+)*)\s+\d\s+\d+\s+100,00\s+ASC - Matrícula"
+    regex_disciplina = r"([A-Z\s]{3}\d+)\s+([\w\s]+)\d\s+\d+\s+\d+,\d+\s+ASC - Matrícula"
 
     correspondencias = re.findall(regex_disciplina, texto_pdf)
 
     for codigo, nome_disciplina in correspondencias:
+        nome_disciplina = nome_disciplina.replace("\n", "")
         array_materias_atuais.append([codigo, nome_disciplina])
 
     return array_materias_atuais
