@@ -40,8 +40,10 @@ def extrair_informacoes(texto_pdf):
 
     # areas = re.findall(r'\d+\.\s(.*?)\s-', texto_pdf)
     areas_horas = re.findall(r'(\d+\..*?) - .*?0\s/\s\d+\s(\d+\s/\s\d+)', texto_pdf)
+    
     for area, horas_cumpridas in areas_horas:
-        Areas.append([area, horas_cumpridas])
+        horas,horas_cumpridas = horas_cumpridas.split(" / ")
+        Areas.append([area, horas, horas_cumpridas])
     return [nome, matricula, curso, periodo_atual, CRs, cr_geral, Areas]
 
 def calcula_materias(array_informacoes):
@@ -51,13 +53,10 @@ def calcula_materias(array_informacoes):
         area = re.sub(r"\d?[.]?\d?[.]","",array[i][0])
         area = re.sub(r"^\s", "" ,area)
         relacao = array[i][1]
-
-        numeros = relacao.split("/")
-        materias_porc = (int(numeros[1]) / int(numeros[0]))
+        materias_porc = (int(array[i][2]) / int(array[i][1]))
 
         array_quantofeito.append([area, materias_porc * 100])
     return array_quantofeito
-
 
 def materias_atuais(texto_pdf):
     array_materias_atuais = []
@@ -70,6 +69,7 @@ def materias_atuais(texto_pdf):
         array_materias_atuais.append([codigo, nome_disciplina])
 
     return array_materias_atuais
+
 
 
 @app.route('/', methods=['POST'])
