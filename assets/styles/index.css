@@ -1,0 +1,64 @@
+body{
+  background: #272525;
+}
+
+p{
+  text-align: center;
+}
+
+
+#file-error {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 40px;
+  width: 580px;
+  height: 670px; 
+  background-color: #343232;
+  border: 1px solid #343232;
+  border-radius: 10px;
+  
+}
+
+.logo-projeto{
+  width: 150px;
+  height: 150px;
+  padding: 7px;
+}
+
+#logo-main{
+  padding-left: 50px;
+  padding-top: 25px;
+  padding-bottom: 50px;
+  width: 470px;
+  height: 170px; 
+}
+
+.file {
+  display: grid;
+  width: 450px;
+  height: 300px; 
+  background-color: #D3D3D3;
+  padding: 20px;
+  margin-top: 100px;
+  margin-left: 40px;
+  border-radius: 8px;
+  border: 1px solid #343232;
+  
+}
+
+#pfile {
+  color: #000;
+  text-align: center;
+  font-size: 22px;
+  margin: 28px;
+  padding: 5px;
+  padding-left: 35px;
+}
+
+#file-hist{
+  font-size: 15px;
+  text-decoration: solid;
+  
+}
+
