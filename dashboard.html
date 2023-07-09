@@ -5,20 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/styles/dashboard.css">
     <link rel="stylesheet" href="assets/styles/global.css">
-    <link rel="stylesheet" href="assets/styles/style.css">
     <title>CR View Dashboard</title>
 </head>
 <body onload="setDashboard()">
     <header>
         <nav class="menu">
             <div class="h-logo">
-                <a href="#"><img src="/assets/images/logo.svg" alt="Logo CR View"></a>                
+                <a href="index.html"><img src="/assets/images/logo.svg" alt="Logo CR View"></a>                
             </div>
 
             <div>
                 <ul class="h-menu">
                     <li><a href="index.html">Início</a></li>
-                    <li><a href="dashboard.html">Créditos</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
                     <li><a href="about.html">Sobre Nós</a></li>
                 </ul>
             </div>
@@ -26,35 +25,36 @@
     </header>
 
     <main class="main-sections">
-        <section class="msection-cr">
-            <h3>CR - Coeficiente de Rendimento</h3>
-            <div class="cr-bar">
-                <div id="middle-circle"></div>                
-                <div id="progress-spinner"></div>                
+        <div class="container">
+            <div id="block-one">
+                <section class="msection-cr">
+                    <h3>CR - Coeficiente de Rendimento</h3>
+                    <div class="cr-bar">
+                        <div id="middle-circle"></div>
+                        <div id="progress-spinner"></div>
+                    </div>
+                </section>
+                <section class="msection-areas">
+                </section>
             </div>
-        </section>
-
-        <section class="msection-disciplinas">
-            <ul id="disciplinas-ul">
-                <li>
-                    <h4 id="title-bar">titulo</h4>
-                    <div id="total-bar"></div>
-                    <div id="percent-bar"></div>
-                </li>
-            </ul>
-        </section>
-
-        <section class="msection-atuais">
-
-        </section>
-
-        <section class="msection-periodos">
-
-        </section>
-
-        <section class="msection-anothers">
-
-        </section>
+        </div>
+        <div class="container2">
+            <div id="block-two">
+                <section id="studying">
+                    <div></div>
+                </section>
+                <div id="wrapper">
+                    <section id="period">
+                    </section>
+                    <section id="activity">
+                        <div class="activity-bar">
+                            <div id="middle-actextra"></div>
+                            <div id="progress-actextra"></div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
     </main>
 
     
