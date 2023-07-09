@@ -30,3 +30,22 @@ async function uploadPdf() {
         console.error(error) 
     } 
 } 
+
+async function listenButton() {
+
+    const file = document.getElementById("#file-hist")
+    var botao = document.getElementById("#butao");
+
+    if(botao = onclick){
+        file.addEventListener("dblclick", async (evento) => {
+            evento.preventDefault()
+                try{
+                    file
+                }catch(erro)
+                {
+                    console.log(erro)
+                }
+            
+            })
+    }
+}

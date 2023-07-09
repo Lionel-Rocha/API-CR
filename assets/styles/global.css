@@ -24,7 +24,7 @@ header{
 .menu {
   background-color: #343232;
   display: flex;
-  min-height: 65px; 
+  min-height: 40px; 
   
   padding: 15px 30px;
   align-items: center;
