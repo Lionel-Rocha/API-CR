@@ -7,6 +7,9 @@ main{
 }
 
 /* sobre a alpha junior */
+.menu-hamburguer {
+    display: none;
+}
 
 #enterprise{
     height: 400px;
@@ -26,8 +29,7 @@ main{
 
 #infos-alpha{
     width: 40%;
-    height: 80%;
-    margin-left: 15px;
+    height: 95%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -67,26 +69,33 @@ main{
 
 #members{
     height: 100vh;
-    width: 100vw;
-    display: flex;
+    width: 73vw;
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    /*display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center;*/
 }
 
-#container{
-    display: grid;
-    grid-template-columns: 2fr 2fr 2fr;
+/*#container{
+
+    display: flex;
+    flex-wrap: wrap;
+    /*grid-template-columns: 2fr 2fr 2fr;
     grid-row-gap: 50px;
     grid-column-gap: 50px;
-}
+}*/
 
 .devinfo{
-    width: 250px;
-    height: 250px;
+    width: 220px;
+    height: 220px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: end;
+    justify-self: center;
 }
 
 
@@ -136,4 +145,73 @@ main{
 .contato-dev a:hover{
     background-color: #306861;
     transition: ease-in-out .3s;
+}
+
+@media screen and (max-width: 320px){
+    .h-menu-desktop {
+        display: none;
+    }
+
+    .menu-hamburguer {
+        width: 20px;
+        display: block;
+        
+    }
+
+    .m-hamb-open {
+        display: none;
+        position: absolute;
+        top: 95px;
+        right: 0;
+        background-color: #343232;
+        box-shadow: -1px 1px 3px #1e1e1e66;
+        padding: 2rem;
+        z-index: 100;
+        border-top: 2px #1e1e1e;
+        max-width: 320px ;
+    }
+
+    .m-hamb-open.active {
+        display: block;
+    }
+
+    .h-menu {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #enterprise {
+        display: block;
+        height: auto;
+        text-align: center;
+    }
+
+    #enterprise img {
+        width: auto;
+    }
+
+
+    #members {
+        grid-template-columns: 1fr;
+    }
+
+    #contato-alpha {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        padding: 2rem 0;
+    }
+
+    #infos-alpha {
+        width: auto;
+        height: auto;
+        margin-top: 0.5rem;
+    }
+
+    #infos-alpha p {
+        padding: .5rem 0;
+        width: 100%;
+    }
+
+
 }
