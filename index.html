@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/styles/inicio.css">
+    <link rel="stylesheet" href="assets/styles/global.css">
+    <title>CR VIEW</title>
+</head>
+<body>
+    <header>
+        <nav class="menu">
+            <div class="h-logo">
+                <a href=""><img id="logo-menu" src="assets/images/logo.svg" alt="Logo CR View"></a>
+            </div>
+
+            <div>
+                <ul class="h-menu">
+                    <li><a href="inicio.html">Início</a></li>
+                    <li><a href="dashboard.html">Créditos</a></li>
+                    <li><a href="about.html">Sobre Nós</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+    <section id="file-error">
+        <div class="logo-projeto">  
+            <img id="logo-main" src="assets/images/logo.svg" alt="Logo Alpha Junior">
+        </div>
+        <div class="file">     
+            <p id="pfile">Insira abaixo o PDF do seu <br>
+            Coeficiente de Rendimento</p>
+            <button id="butao" onclick="listenButton()"><p>Inserir</p></button>
+            <input type="file" name="historico" id="file-hist" oninput="uploadPdf()">
+        <span></span> 
+        </div>
+    </section>
+    </main>
+    <script src="assets/scripts js/uploadpdf.js"></script>
+</body>
+</html>
+
+
+
+
