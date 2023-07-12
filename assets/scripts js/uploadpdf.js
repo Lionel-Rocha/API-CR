@@ -10,6 +10,7 @@ async function uploadPdf() {
     formData.append('pdf', file)
 
     try { 
+        localStorage.removeItem('data')
         const response = await fetch('https://api-cr.up.railway.app/', {
             method: 'POST', mode: 'cors', body: formData
         }).then(response=> response.json()).then(response => localStorage.setItem('data', JSON.stringify({
