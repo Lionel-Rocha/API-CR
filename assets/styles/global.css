@@ -2,7 +2,7 @@
 
 :root{
   --gray: #737373;
-  --cyan: #13f2f2;
+  /* --cyan: #13f2f2; */
   --water-green: #07f2db;
   --green: #79d9cf;
   --white: #f2f2f2;
@@ -12,6 +12,8 @@
 * {
   margin: unset;
   padding: unset;
+  border: 0;
+  box-sizing: border-box;
   text-decoration: none;
   font-style: none;
   font-family: 'Montserrat', sans-serif;
@@ -32,7 +34,7 @@ header{
 }
 
 .menu {
-  background-color: #343232;
+  background-color: var(--dark-gray);
   display: flex;
   height: 10vh; 
   
