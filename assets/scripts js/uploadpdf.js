@@ -23,29 +23,11 @@ async function uploadPdf() {
             areascred: response[1],
             aulas: response[2]
         })))
-        setTimeout(window.location.replace('dashboard.html', 'index.html'), 2000);
+        setTimeout(window.location.replace('dashboard.html', 'index.html'), 1500);
         
     } catch (error) { 
-        document.querySelector("#file-error span").innerText = "\nOcorreu um erro durante o envio do PDF." 
+        document.querySelector("#error-file").innerText = "Ocorreu um erro durante o envio do PDF."
+        
         console.error(error) 
     } 
 } 
-
-async function listenButton() {
-
-    const file = document.getElementById("#file-hist")
-    var botao = document.getElementById("#butao");
-
-    if(botao = onclick){
-        file.addEventListener("dblclick", async (evento) => {
-            evento.preventDefault()
-                try{
-                    file
-                }catch(erro)
-                {
-                    console.log(erro)
-                }
-            
-            })
-    }
-}

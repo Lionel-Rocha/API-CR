@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/styles/inicio.css">
     <link rel="stylesheet" href="assets/styles/global.css">
+    <link rel="stylesheet" href="assets/styles/index.css">
     <title>CR VIEW</title>
 </head>
 <body>
@@ -24,16 +24,15 @@
         </nav>
     </header>
     <main>
-    <section id="file-error">
-        <div class="logo-projeto">  
-            <img id="logo-main" src="assets/images/logo.svg" alt="Logo Alpha Junior">
-        </div>
-        <div class="file">     
-            <p id="pfile">Insira abaixo o PDF do seu <br>
-            Coeficiente de Rendimento</p>
-            <button id="butao" onclick="listenButton()"><p>Inserir</p></button>
-            <input type="file" name="historico" id="file-hist" oninput="uploadPdf()">
-        <span></span> 
+    <section id="main-box">
+        <div id="container">
+            <img id="logo" src="assets/images/logo.svg" alt="Logo Alpha Junior">
+            <div id="file-box">
+                <span>Coeficiente de Rendimento</span>
+                <button type="button" id="btn-file" onclick="document.querySelector('#file-hist').click()"><img src="assets/icons/file-pdf-regular.svg" alt="icone de pdf"></button>
+                <input type="file" name="historico" id="file-hist" accept=".pdf" oninput="uploadPdf()" style="display: none;">
+                <span id="error-file" style="color: #b93636;"></span>
+            </div>
         </div>
     </section>
     </main>
