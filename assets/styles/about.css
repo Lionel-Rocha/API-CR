@@ -94,7 +94,7 @@ main{
     width: 90%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+    gap: 50px;
     grid-column-gap: 15px;
 }
 
@@ -185,13 +185,17 @@ main{
         display: block;
     }
 
+    main {
+        display: flex;
+    }
+
     .h-menu {
         display: flex;
         flex-direction: column;
     }
 
     #enterprise {
-        display: block;
+        /* display: block; */
         height: auto;
         text-align: center;
     }
@@ -200,9 +204,30 @@ main{
         width: auto;
     }
 
+    #container {
+        display: block;
+        margin-top: 20px;
+        min-width: 260px;
+        height: auto;
+    }
 
     #members {
+        margin-top: 70px;
+        display: flex;
+        justify-content: center;
+        height: fit-content;
+    }
+
+    #wrapper {
         grid-template-columns: 1fr;
+        display: flex;
+        gap: 50px;
+        /* justify-self: center; */
+        
+    }
+
+    #members {
+        /* grid-template-columns: 1fr; */
     }
 
     #contato-alpha {
