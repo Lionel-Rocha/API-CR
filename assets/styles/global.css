@@ -30,13 +30,13 @@ body{
 }
 
 header{
-  width: 100%;
+  width: 100vw;
   position: sticky;
   top: 0;
   z-index: 1;
 }
 
-.menu {
+.menu{
   background-color: var(--dark-gray);
   display: flex;
   height: 10vh; 
@@ -46,15 +46,29 @@ header{
   justify-content: space-between;
 }
 
-.h-menu {
+.h-menu{
   display: flex;
   list-style-type: none;
 }
 
-.h-menu a{
+.h-menu li{
+  margin: 0 15px;
+}
+
+.h-logo{
+  max-width: 100px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   margin: 0 15px;
 }
 
 .h-logo img{
-  height: 90%;
+  height: 45px;
+}
+
+#name-logo{
+  font-size: 18px;
+  font-weight: 600;
+  word-wrap: break-word;
 }

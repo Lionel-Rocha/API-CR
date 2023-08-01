@@ -10,9 +10,10 @@
 #container{
   min-width: 350px;
   max-width: 450px;
-  width: 45%;
-  height: 450px; 
-  padding: 10px 20px 40px 20px;
+  width: 50%;
+  min-height: 380px;
+  height: 80%; 
+  padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -21,15 +22,15 @@
   border-radius: 10px;
 }
 
-#logo{
-  width: 300px;
-  margin: 25px;
+#main-logo{
+  min-width: 150px;
+  width: 45%;
 }
 
 #file-box {
   width: 90%;
-  height: 300px; 
-  padding: 40px;
+  height: 50%;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -46,7 +47,7 @@
 }
 
 #btn-file{
-  width: 70%;
+  width: 50%;
   padding: 10px 5px;
   border-radius: 10px;
   background-color: transparent;
@@ -54,9 +55,9 @@
 }
 
 #btn-file:hover{
-  scale: 1.1;
+  scale: 1.07;
   background-color: var(--green);
-  transition: ease-in-out .2s;
+  transition: ease-in-out .3s;
 }
 
 #btn-file:active{

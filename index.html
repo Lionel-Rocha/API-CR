@@ -3,20 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="cr, view, unirio, dashboard, historico, alpha, junior">
+    <!-- <meta name="description" content=""> -->
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="assets/styles/global.css">
     <link rel="stylesheet" href="assets/styles/index.css">
-    <title>CR VIEW</title>
+    <title>CR View</title>
 </head>
 <body>
     <header>
         <nav class="menu">
-            <div class="h-logo">
-                <a href=""><img id="logo-menu" src="assets/images/logo.svg" alt="Logo CR View"></a>
-            </div>
+            <a href="/" class="h-logo">
+                <img id="logo-menu" src="assets/images/logo.png" alt="Logo CR View">
+                <span id="name-logo">CR VIEW</span>
+            </a>
 
             <div>
                 <ul class="h-menu">
-                    <li><a href="index.html">Início</a></li>
+                    <li><a href="/">Início</a></li>
                     <li><a href="dashboard.html">Dashboard</a></li>
                     <li><a href="about.html">Sobre Nós</a></li>
                 </ul>
@@ -26,9 +30,9 @@
     <main>
     <section id="main-box">
         <div id="container">
-            <img id="logo" src="assets/images/logo.svg" alt="Logo Alpha Junior">
+            <img id="main-logo" src="assets/images/logo.png" alt="Logo CR View">
             <div id="file-box">
-                <span>Coeficiente de Rendimento</span>
+                <span>Insira seu histórico</span>
                 <button type="button" id="btn-file" onclick="document.querySelector('#file-hist').click()"><img src="assets/icons/file-pdf-regular.svg" alt="icone de pdf"></button>
                 <input type="file" name="historico" id="file-hist" accept=".pdf" oninput="uploadPdf()" style="display: none;">
                 <span id="error-file" style="color: #b93636;"></span>
