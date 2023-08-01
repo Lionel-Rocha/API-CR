@@ -47,6 +47,7 @@ main{
 
 #infos-alpha p{
     font-size: 14px;
+    font-weight: 600;
     text-align: justify;
     margin-bottom: 10px;
 }
@@ -59,23 +60,20 @@ main{
 }
 
 #contato-alpha a{
-    width: 45px;
-    height: 45px;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px 5px;
-    border: 1px solid #3f9b92;
+    width: 50px;
+    height: 50px;
     border-radius: 10px;
+    background-color: var(--gray);
 }
 
-#contato-alpha a i{
-    font-size: 18px;
-    color: white;
+#contato-alpha a img{
+    width: 26px;
+    margin: 12px 0 0 12px;
 }
 
 #contato-alpha a:hover{
-    background-color: #306861;
+    scale: 1.1;
+    background-color: var(--green);
     transition: ease-in-out .3s;
 }
 
@@ -94,45 +92,42 @@ main{
     width: 90%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 50px;
+    gap: 10px;
     grid-column-gap: 15px;
+    margin-top: 10vh;
 }
 
 .devinfo{
-    width: 220px;
-    height: 220px;
+    width: 210px;
+    height: 240px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: end;
-    justify-self: center;
 }
 
-.devinfo img{
+.dev-image{
     width: 180px;
     height: 180px;
-    margin-bottom: 20px;
+    margin-bottom: 8px;
     border: 1px solid #337e76;
     border-radius: 10px;
 }
 
 .devinfo p{
     width: 178px;
-    height: 180px;
+    height: 179px;
     display: flex;
     align-items: end;
     justify-content: center;
     border-radius: 10px;
     position: absolute;
-    margin-bottom: 61px;
-    padding-bottom: 10px;
-    background: linear-gradient(to top, #000, transparent, transparent, transparent);
+    padding-bottom: 8px;
+    background: linear-gradient(to top, #000000f1, transparent, transparent);
     font-size: 14px;
 }
 
 .contato-dev{
     width: 100px;
-    margin-top: 5px;
     display: inline-flex;
     justify-content: space-between;
 }
@@ -140,20 +135,18 @@ main{
 .contato-dev a{
     width: 35px;
     height: 35px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid #3f9b92;
     border-radius: 10px;
+    background-color: var(--gray);
 }
 
-.contato-dev a i{
-    font-size: 16px;
-    color: white;
+.contato-dev a img{
+    width: 19px;
+    margin: 8px 0 0 8px;
 }
 
 .contato-dev a:hover{
-    background-color: #306861;
+    scale: 1.1;
+    background-color: var(--green);
     transition: ease-in-out .3s;
 }
 
