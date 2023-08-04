@@ -126,33 +126,6 @@
             </div>
         </section>
     </main>
-    <script>
-
-        function copiarEmailParaAreaTransferencia(email) {
-            const textareaTemp = document.createElement("textarea");
-            textareaTemp.value = email;
-            document.body.appendChild(textareaTemp);
-
-            textareaTemp.select();
-
-            try {
-                const sucesso = document.execCommand("copy");
-
-            }
-            
-            document.body.removeChild(textareaTemp);
-        }
-
-        // Adiciona um evento de clique aos links de email
-        const linksEmail = document.querySelectorAll("a[href^='mailto:']");
-        linksEmail.forEach((link) => {
-            link.addEventListener("click", (event) => {
-                event.preventDefault(); // Impede que o link seja aberto no navegador
-                const email = link.href.replace("mailto:", ""); // Obtém o email a partir do link
-                copiarEmailParaAreaTransferencia(email); // Chama a função para copiar o email
-            });
-        });
-    </script>
 
     <script src="https://kit.fontawesome.com/18ae70967a.js" crossorigin="anonymous"></script>
     <script src="./assets/scripts js/about.js"></script>
