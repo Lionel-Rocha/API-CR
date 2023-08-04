@@ -79,7 +79,7 @@
                     <img class="dev-image" src="assets/images/team/joao.jpeg" alt="">
                     <p>João Campbell</p>
                     <div class="contato-dev">
-                        <a href="mailto:joao.campbell@outlook.com"><img src="assets/icons/envelope-regular.svg" alt="logo email"></a>
+                        <a href="mailto:joao.campbell@outlook.com" onclick="document.execCommand('copy')"><img src="assets/icons/envelope-regular.svg" alt="logo email"></a>
                         <a href="https://www.linkedin.com/in/jo%C3%A3o-campbell-6b9442245" target="dev"><img src="assets/icons/linkedin-in.svg" alt="logo linkedin"></a>
                     </div>
                 </div>
@@ -126,7 +126,36 @@
             </div>
         </section>
     </main>
+    <script>
+
+        function copiarEmailParaAreaTransferencia(email) {
+            const textareaTemp = document.createElement("textarea");
+            textareaTemp.value = email;
+            document.body.appendChild(textareaTemp);
+
+            textareaTemp.select();
+
+            try {
+                const sucesso = document.execCommand("copy");
+
+            }
+            
+            document.body.removeChild(textareaTemp);
+        }
+
+        // Adiciona um evento de clique aos links de email
+        const linksEmail = document.querySelectorAll("a[href^='mailto:']");
+        linksEmail.forEach((link) => {
+            link.addEventListener("click", (event) => {
+                event.preventDefault(); // Impede que o link seja aberto no navegador
+                const email = link.href.replace("mailto:", ""); // Obtém o email a partir do link
+                copiarEmailParaAreaTransferencia(email); // Chama a função para copiar o email
+            });
+        });
+    </script>
+
     <script src="https://kit.fontawesome.com/18ae70967a.js" crossorigin="anonymous"></script>
     <script src="./assets/scripts js/about.js"></script>
 </body>
 </html>
+
