@@ -20,7 +20,8 @@ main{
 }
 
 #container{
-    height: 450px;
+    max-height: 450px;
+    height: 75%;
     min-width: 550px;
     width: 90%;
     padding: 20px 40px;
@@ -31,8 +32,8 @@ main{
     background-color: var(--dark-gray);
 }
 
-#enterprise img{
-    width: 35%;
+#container img{
+    width: 30%;
     margin-right: 15px;
 }
 
@@ -64,11 +65,12 @@ main{
     height: 50px;
     border-radius: 10px;
     background-color: var(--gray);
+    display: flex;
 }
 
 #contato-alpha a img{
     width: 26px;
-    margin: 12px 0 0 12px;
+    margin: auto;
 }
 
 #contato-alpha a:hover{
@@ -109,13 +111,12 @@ main{
     width: 180px;
     height: 180px;
     margin-bottom: 8px;
-    border: 1px solid #337e76;
     border-radius: 10px;
 }
 
 .devinfo p{
-    width: 178px;
-    height: 179px;
+    width: 180px;
+    height: 180px;
     display: flex;
     align-items: end;
     justify-content: center;
@@ -124,24 +125,27 @@ main{
     padding-bottom: 8px;
     background: linear-gradient(to top, #000000f1, transparent, transparent);
     font-size: 14px;
+    border: 1px solid #337e76;
 }
 
 .contato-dev{
-    width: 100px;
+    width: 120px;
+    margin-top: 5px;
     display: inline-flex;
     justify-content: space-between;
 }
 
 .contato-dev a{
-    width: 35px;
-    height: 35px;
+    width: 40px;
+    height: 40px;
     border-radius: 10px;
     background-color: var(--gray);
+    display: flex;
 }
 
 .contato-dev a img{
-    width: 19px;
-    margin: 8px 0 0 8px;
+    width: 22px;
+    margin: 0 auto;
 }
 
 .contato-dev a:hover{
@@ -150,7 +154,83 @@ main{
     transition: ease-in-out .3s;
 }
 
-@media screen and (max-width: 320px){
+@media screen and (max-width: 1200px) {
+
+    /* enterprise */
+
+    main {
+        display: flex;
+    }
+
+    #enterprise {
+        width: 85vw;
+        text-align: center;
+    }
+
+    #container {
+        width: 95%;
+        display: block;
+        height: 85%;
+        min-height: 570px;
+        max-height: 595px;
+    }
+
+    #container img{
+        width: 25%;
+        margin: 0;
+    }
+
+    #contato-alpha a{
+        width: 45px;
+        height: 45px;
+    }
+
+    #contato-alpha a img{
+        width: 22px;
+    }
+
+    #infos-alpha {
+        width: auto;
+        height: auto;
+        margin-top: 0.5rem;
+    }
+
+    #infos-alpha p {
+        padding: .5rem 0;
+        width: 100%;
+    }
+
+    /* members */
+
+    #members{
+        width: 85vw;
+        min-height: 100vh;
+        height: auto;
+    }
+
+    #wrapper{
+        width: 100%;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0;
+    }
+
+    .devinfo{
+        width: 280px;
+        height: 310px;
+        margin: auto;
+    }
+
+    .dev-image, .devinfo p{
+        width: 220px;
+        height: 220px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    
+}
+
+@media screen and (max-width: 480px){
     .h-menu-desktop {
         display: none;
     }
