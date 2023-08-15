@@ -2,11 +2,12 @@
 
 :root{
   --gray: #737373;
-  --dark-green: #122222;
+  --dark-green: #337e76;
   --water-green: #07f2db;
   --green: #79d9cf;
   --white: #f2f2f2;
   --dark-gray: #343232;
+  --dark-gray-transp: #343232c2;
 }
 
 * {
@@ -18,6 +19,11 @@
   font-style: none;
   font-family: 'Montserrat', sans-serif;
   color: var(--white);
+}
+
+svg{
+  fill: #fff;
+  width: 21px;
 }
 
 body{
@@ -34,25 +40,33 @@ header{
   position: sticky;
   top: 0;
   z-index: 1;
+  max-height: 10vh;
 }
 
 .menu{
   background-color: var(--dark-gray);
   display: flex;
-  height: 10vh; 
   
   padding: 0 15px;
   align-items: center;
   justify-content: space-between;
 }
 
-.h-menu{
+#h-menu{
   display: flex;
+  align-items: center;
   list-style-type: none;
 }
 
-.h-menu li{
+#h-menu li{
   margin: 0 15px;
+  padding: 5px 10px;
+  border-radius: 12px 12px 5px 12px;
+}
+
+#h-menu li:active{
+  background-color: var(--gray);
+  transition: ease-in .2s;
 }
 
 .h-logo{
@@ -64,11 +78,47 @@ header{
 }
 
 .h-logo img{
-  height: 45px;
+  height: 42px;
 }
 
 #name-logo{
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
   word-wrap: break-word;
+}
+
+#menu-bar{
+  display: none;
+}
+
+
+@media screen and (max-width: 480px){
+  #h-menu {
+      width: 100vw;
+      height: 170px;
+      padding: 10px 25px 10px 0px;
+      display: none;
+      position: absolute;
+      flex-direction: column;
+      align-items: end;
+      text-align: right;
+      right: 0;
+      top: 7.9vh;
+      background: var(--dark-gray-transp);
+      backdrop-filter: blur(8px);
+      border-top: 1px solid var(--gray);
+      border-bottom: 1px solid var(--gray);
+  }
+
+  #h-menu li{
+      margin: 10px 0;
+  }
+
+  #menu-bar{
+      display: block;
+      width: 30px;
+      padding: 5px;
+      padding-top: 2px;
+      cursor: pointer;
+  }
 }
