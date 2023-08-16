@@ -1,212 +1,201 @@
-.main-sections{
-  width: 80vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+main{
+    width: 90vw;
+    margin-top: 5vh;
+    min-height: 185vh;
+    height: auto;
 }
 
-.container{
-  width: 100%;
-  height: 90vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.block{
+    background-color: var(--dark-gray);
+    border-radius: 10px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-/* cr e areas */
+/* student infos */
 
-#block-one{
-  width: 100%;
-  height: 400px;
-  display: flex;
-  justify-content: space-between;
+#student{
+    width: 100%;
+    height: 50px;
+    padding: 5px 35px;
+    margin-bottom: 30px;
+    justify-content: space-between;
 }
 
-.msection-cr {
-  width: 60%;
-  padding: 30px;
-  border-radius: 10px;
-  background-color: var(--dark-gray);
+/* colunms */
+
+#infos{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
+#columnone{
+    width: 100%;
+    max-width: 750px;
+    padding-right: 35px;
+    height: 950px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+aside{
+    width: 75%;
+    height: 950px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* cr global */
+
+#crglobal{
+    height: 400px;
+    width: 100%;
+    padding: 20px 50px;
+}
+  
 .cr-bar{
-  margin-top: 25px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #progress-spinner {
-  border-radius: 50%;
-  height: 250px;
-  width: 250px;
+    border-radius: 50%;
+    height: 280px;
+    width: 280px;
 }
-
 
 #middle-circle {
-  height: 210px;
-  width: 210px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  border-radius: 50%;
-  background-color: var(--dark-gray);
+    height: 230px;
+    width: 230px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    border-radius: 50%;
+    background-color: var(--dark-gray);
 }
 
-/* areas percent */
+/* areas */
 
-
-.msection-areas{
-  width: 35%;
-  padding: 20% 20px 10px 20px;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--dark-gray);
-  overflow: auto;
-}
-
-.span-bar-area{
-  font-size: 14px;
-  text-align: center;
+#areas{
+    height: 100%;
+    width: 100%;
+    min-width: 370px;
+    padding: 20px 30px;
+    margin-bottom: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 .bar-area{
-  margin: 10px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 10px;
+    margin-bottom: 5px;
+}
+
+.span-bar-area{
+    width: 360px;
+    text-align: center;
+    margin-bottom: 7px;
+    font-size: 13px;
 }
 
 .bar-bg-area{
-  width: 250px;
-  height: 15px;
-  border-radius: 50px;
-  background-color: var(--white);
+    width: 350px;
+    height: 18px;
+    border-radius: 20px;
+    background-color: var(--gray);
 }
 
 .bar-perc-area{
-  height: 15px;
-  margin-top: -15px;
-  border-radius: 50px;
-  background-color: var(--green);
+    height: 18px;
+    margin-top: -18px;
+    border-radius: 25px;
+    background-color: var(--green);
 }
 
-/* cursando, periodo, AC/AE/OP */
+/* classes */
 
-.container2{
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+#classes{
+    height: 450px;
+    width: 100%;
+    padding: 20px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-#block-two{
-  width: 100%;
-  height: 400px;
-  display: flex;
-  justify-content: space-between;
+#classes div{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    column-gap: 70px;
 }
 
-/* cursando */
-
-#studying{
-  width: 60%;
-  padding: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 10px;
-  background-color: var(--dark-gray);
+.class{
+    width: 125px;
+    height: 125px;
+    padding: 5px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid var(--green);
+    font-size: 10px;
 }
 
-#studying div{
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  overflow: auto;
+/* extra */
+
+#extra{
+    width: 100%;
+    height: 30%;
 }
 
-.classes{
-  width: 130px;
-  height: 130px;
-  padding: 10px;
-  margin: 15px;
-  font-size: 10px;
-  font-weight: 600;
-  word-wrap: normal;
-  text-align: center;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border: 2px solid var(--green);
-  border-radius: 50%;
+#progress-extra{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    transform: rotateY(180deg);
 }
 
-/* periodo e horas de atividades */
-
-#wrapper{
-  width: 35%;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+#middle-extra{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--dark-gray);
+    z-index: 2;
+    font-size: 10px;
 }
 
-#period, #activity{
-  width: 100%;
-  height: 180px;
-  padding: 20px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 10px;
-  background-color: var(--dark-gray);
-}
 
-/* periodo */
 
-.currentperiod{
-  width: 100px;
-  height: 100px;
-  padding: 5px;
-  margin: 10px;
-  font-size: 14px;
-  font-weight: 600;
-  text-align: center;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border: 2px solid var(--green);
-  border-radius: 50%;
-}
+/* others */
 
-/* carga horaria atividades extras */
-
-.activity-bar{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#progress-actextra{
-  border-radius: 50%;
-  height: 150px;
-  width: 150px;
-}
-
-#middle-actextra{
-  width: 130px;
-  height: 130px;
-  font-size: 12px;
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center  ;
-  border-radius: 50%;
-  background-color: var(--dark-gray);
+.line{
+    width: 100%;
+    height: 3px;
+    border-radius: 3px;
+    background-color: var(--dark-gray);
 }

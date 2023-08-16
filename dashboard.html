@@ -3,62 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="assets/styles/dashboard.css">
     <link rel="stylesheet" href="assets/styles/global.css">
-    <title>CR View Dashboard</title>
+    <title>CR View</title>
 </head>
 <body onload="setDashboard()">
     <header>
         <nav class="menu">
-            <div class="h-logo">
-                <a href="index.html"><img src="/assets/images/logo.svg" alt="Logo CR View"></a>                
-            </div>
-
-            <div>
-                <ul class="h-menu">
-                    <li><a href="index.html">Início</a></li>
-                    <li><a href="dashboard.html">Dashboard</a></li>
+            <a href="/" class="h-logo">
+                <img id="logo-menu" src="assets/images/logo.png" alt="Logo CR View">
+                <span id="name-logo">CR VIEW</span>
+            </a>
+            <div class="h-menu-desktop">
+                <svg id="menu-bar" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 448 512"><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
+                <ul id="h-menu">
+                    <li><a href="/">Início</a></li>
+                    <li style="background-color: var(--dark-green);"><a href="dashboard.html">Dashboard</a></li>
                     <li><a href="about.html">Sobre Nós</a></li>
                 </ul>
             </div>
         </nav>
     </header>
 
-    <main class="main-sections">
-        <div class="container">
-            <div id="block-one">
-                <section class="msection-cr">
-                    <h3>CR - Coeficiente de Rendimento</h3>
+    <main>
+        <section class="block" id="student">
+            <span id="name"></span>
+            <span id="regist"></span>
+            <span id="period"></span>
+            <span id="course"></span>
+        </section>
+        <div id="infos">
+            <div id="columnone">
+                <!-- cr geral -->
+                <section class="block" id="crglobal">
                     <div class="cr-bar">
                         <div id="middle-circle"></div>
                         <div id="progress-spinner"></div>
                     </div>
                 </section>
-                <section class="msection-areas">
-                </section>
-            </div>
-        </div>
-        <div class="container2">
-            <div id="block-two">
-                <section id="studying">
+                <div class="line"></div>
+                <!-- aulas atuais -->
+                <section class="block" id="classes">
                     <div></div>
                 </section>
-                <div id="wrapper">
-                    <section id="period">
-                    </section>
-                    <section id="activity">
-                        <div class="activity-bar">
-                            <div id="middle-actextra"></div>
-                            <div id="progress-actextra"></div>
-                        </div>
-                    </section>
-                </div>
             </div>
-        </div>
+            <aside>
+                <!-- areas ch -->
+                <section class="block" id="areas">
+                    
+                </section>
+                <!-- extras: estagio, complementar e extracurricular -->
+                <section class="block" id="extra">
+                    <div class="cr-bar">
+                        <div id="middle-extra"></div>
+                        <div id="progress-extra"></div>
+                    </div>
+                </section>
+            </aside>
+        </div>      
     </main>
 
     
     
-    <script src="assets/scripts js/dashboard.js"></script>
+    <script src="./assets/scripts js/dashboard.js"></script>
+    <script src="./assets/scripts js/main.js"></script>
 </body>
 </html>
