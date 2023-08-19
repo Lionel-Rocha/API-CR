@@ -199,3 +199,57 @@ aside{
     border-radius: 3px;
     background-color: var(--dark-gray);
 }
+
+@media screen and (max-width: 1200px) {
+
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #student {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        gap: 10px;
+    }
+
+    #classes div {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 992px) {
+
+    main {
+        padding-bottom: 100px;
+    }
+
+    #infos {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    #columnone {
+        padding-right: 0;
+    }
+
+    #classes div {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px){
+
+    #classes div {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    main {
+        
+    }
+}
