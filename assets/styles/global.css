@@ -108,7 +108,7 @@ header{
       align-items: end;
       text-align: right;
       right: 0;
-      top: 7.9vh;
+      top: 10vh;
       background: var(--dark-gray-transp);
       backdrop-filter: blur(8px);
       border-top: 1px solid var(--gray);
