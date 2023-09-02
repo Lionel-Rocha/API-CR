@@ -47,7 +47,7 @@ function setDashboard(){
     // carga horaria por area
     for(area of data.areasch){
         if(!area[0].match("Atividades Complementares")){
-            perc = (300 * area[2])/area[1]
+            perc = (320 * area[2])/area[1]
 
             areasplace.innerHTML += `<div class="bar-area">
                                         <span class="span-bar-area">${area[0]}</span>

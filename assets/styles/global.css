@@ -97,7 +97,7 @@ header{
 }
 
 
-@media screen and (max-width: 480px){
+@media screen and (max-width: 748px){
   #h-menu {
       width: 100vw;
       height: 170px;
